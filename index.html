@@ -3,154 +3,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda Online - Bootstrap 5</title>
+  <title>SportZone - Tienda Deportiva</title>
   <!-- Bootstrap 5 CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons CDN (Para el carrito) -->
+  <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="bg-light">
 
-  <!-- Navbar superior con ícono de carrito y contador visual -->
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid justify-content-end px-4 pt-2">
-      <div class="position-relative">
-        <i class="bi bi-cart3 fs-2"></i>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-          1
-          <span class="visually-hidden">Productos en carrito</span>
-        </span>
+  <!-- Encabezado con Navbar y Carrito de Compras -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#"><i class="bi bi-lightning-charge-fill text-warning"></i> SportZone</a>
+      <div class="ms-auto">
+        <button type="button" class="btn btn-outline-light position-relative">
+          <i class="bi bi-cart3 fs-5"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            3
+            <span class="visually-hidden">Productos en carrito</span>
+          </span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <div class="container my-3">
+  <div class="container my-4">
     
-    <!-- Encabezado Principal: Carousel -->
+    <!-- Carousel de Ofertas -->
     <section class="mb-4">
-      <div id="mainCarousel" class="carousel slide rounded overflow-hidden shadow-sm" data-bs-ride="carousel">
+      <div id="sportCarousel" class="carousel slide rounded-3 overflow-hidden shadow" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#sportCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#sportCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#sportCarousel" data-bs-slide-to="2"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://picsum.photos/1200/350?random=1" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Promoción 1">
-            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-              <h5>Ofertas de Temporada</h5>
-              <p>Aprovecha los mejores descuentos en productos seleccionados.</p>
+            <img src="https://picsum.photos/1200/350?random=101" class="d-block w-100" style="height: 320px; object-fit: cover;" alt="Colección Running">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-60 rounded p-2">
+              <h4 class="fw-bold">Nueva Colección Running 2026</h4>
+              <p class="mb-0">Equípate con lo mejor para tus entrenamientos al aire libre.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="https://picsum.photos/1200/350?random=2" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Promoción 2">
-            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-              <h5>Nuevos Lanzamientos</h5>
-              <p>Conoce lo más reciente en tecnología y accesorios.</p>
+            <img src="https://picsum.photos/1200/350?random=102" class="d-block w-100" style="height: 320px; object-fit: cover;" alt="Descuentos del mes">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-60 rounded p-2">
+              <h4 class="fw-bold">Hasta 40% OFF en Calzado</h4>
+              <p class="mb-0">Aprovecha nuestras ofertas exclusivas por tiempo limitado.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="https://picsum.photos/1200/350?random=3" class="d-block w-100" style="height: 350px; object-fit: cover;" alt="Promoción 3">
-            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-              <h5>Envíos a Todo el País</h5>
-              <p>Recibe tus compras directamente en la puerta de tu casa.</p>
+            <img src="https://picsum.photos/1200/350?random=103" class="d-block w-100" style="height: 320px; object-fit: cover;" alt="Accesorios Gym">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-60 rounded p-2">
+              <h4 class="fw-bold">Accesorios de Gimnasio</h4>
+              <p class="mb-0">Todo lo que necesitas para llevar tu fuerza al siguiente nivel.</p>
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#sportCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
+        <button class="carousel-control-next" type="button" data-bs-target="#sportCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
         </button>
       </div>
     </section>
 
-    <!-- Cuerpo Principal (Distribución en row) -->
+    <!-- Layout Principal (Row dividida) -->
     <div class="row g-4">
       
       <!-- Columna Izquierda: Menú de Categorías (col-sm-3) -->
       <aside class="col-sm-3">
-        <div class="card shadow-sm p-3">
-          <h5 class="card-title fw-bold mb-3">Categorías</h5>
+        <div class="card border-0 shadow-sm">
+          <div class="card-header bg-dark text-white fw-bold">
+            <i class="bi bi-grid-fill me-2"></i>Categorías
+          </div>
           <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action border-0 px-0">Categoría 1</a>
-            <a href="#" class="list-group-item list-group-item-action border-0 px-0">Categoría 2</a>
-            <a href="#" class="list-group-item list-group-item-action border-0 px-0">Categoría 3</a>
-            <a href="#" class="list-group-item list-group-item-action border-0 px-0">Categoría 4</a>
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+              Calzado Deportivo <span class="badge bg-secondary rounded-pill">12</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+              Ropa de Entrenamiento <span class="badge bg-secondary rounded-pill">24</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+              Accesorios y Equipamiento <span class="badge bg-secondary rounded-pill">8</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+              Suplementos <span class="badge bg-secondary rounded-pill">15</span>
+            </a>
           </div>
         </div>
       </aside>
 
       <!-- Columna Derecha: Productos (col-sm-9) -->
       <main class="col-sm-9">
-        <!-- Grid de Productos: 1 por fila en móviles (col-12), 3 por fila en medianas/grandes (col-md-4) -->
+        <!-- Grid Responsivo: 1 col en celular, 3 cols en pantallas medianas o grandes -->
         <div class="row row-cols-1 row-cols-md-3 g-4">
           
           <!-- Producto 1 -->
           <div class="col">
-            <div class="card h-100 shadow-sm text-center">
-              <img src="https://picsum.photos/400/300?random=10" class="card-img-top" alt="Producto 1" style="height: 200px; object-fit: cover;">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://picsum.photos/400/300?random=201" class="card-img-top" alt="Zapatillas Pro" style="height: 180px; object-fit: cover;">
               <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">Nombre del Producto 1</h6>
-                <button class="btn btn-outline-secondary w-100 mt-2">Agregar al carrito</button>
+                <div>
+                  <h6 class="card-title fw-bold text-dark mb-1">Zapatillas Pro Running</h6>
+                  <p class="text-muted small mb-2">Q683.99</p>
+                </div>
+                <button class="btn btn-primary btn-sm w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al carrito</button>
               </div>
             </div>
           </div>
 
           <!-- Producto 2 -->
           <div class="col">
-            <div class="card h-100 shadow-sm text-center">
-              <img src="https://picsum.photos/400/300?random=11" class="card-img-top" alt="Producto 2" style="height: 200px; object-fit: cover;">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://picsum.photos/400/300?random=202" class="card-img-top" alt="Camiseta DryFit" style="height: 180px; object-fit: cover;">
               <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">Nombre del Producto 2</h6>
-                <button class="btn btn-outline-secondary w-100 mt-2">Agregar al carrito</button>
+                <div>
+                  <h6 class="card-title fw-bold text-dark mb-1">Camiseta DryFit Transpirable</h6>
+                  <p class="text-muted small mb-2">Q227.99</p>
+                </div>
+                <button class="btn btn-primary btn-sm w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al carrito</button>
               </div>
             </div>
           </div>
 
           <!-- Producto 3 -->
           <div class="col">
-            <div class="card h-100 shadow-sm text-center">
-              <img src="https://picsum.photos/400/300?random=12" class="card-img-top" alt="Producto 3" style="height: 200px; object-fit: cover;">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://picsum.photos/400/300?random=203" class="card-img-top" alt="Reloj GPS" style="height: 180px; object-fit: cover;">
               <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">Nombre del Producto 3</h6>
-                <button class="btn btn-outline-secondary w-100 mt-2">Agregar al carrito</button>
+                <div>
+                  <h6 class="card-title fw-bold text-dark mb-1">Reloj GPS Deportivo</h6>
+                  <p class="text-muted small mb-2">Q1,132.40</p>
+                </div>
+                <button class="btn btn-primary btn-sm w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al carrito</button>
               </div>
             </div>
           </div>
 
           <!-- Producto 4 -->
           <div class="col">
-            <div class="card h-100 shadow-sm text-center">
-              <img src="https://picsum.photos/400/300?random=13" class="card-img-top" alt="Producto 4" style="height: 200px; object-fit: cover;">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://picsum.photos/400/300?random=204" class="card-img-top" alt="Mochila Deportiva" style="height: 180px; object-fit: cover;">
               <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">Nombre del Producto 4</h6>
-                <button class="btn btn-outline-secondary w-100 mt-2">Agregar al carrito</button>
+                <div>
+                  <h6 class="card-title fw-bold text-dark mb-1">Mochila Deportiva Impermeable</h6>
+                  <p class="text-muted small mb-2">Q300.00</p>
+                </div>
+                <button class="btn btn-primary btn-sm w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al carrito</button>
               </div>
             </div>
           </div>
 
           <!-- Producto 5 -->
           <div class="col">
-            <div class="card h-100 shadow-sm text-center">
-              <img src="https://picsum.photos/400/300?random=14" class="card-img-top" alt="Producto 5" style="height: 200px; object-fit: cover;">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://picsum.photos/400/300?random=205" class="card-img-top" alt="Botella Térmica" style="height: 180px; object-fit: cover;">
               <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">Nombre del Producto 5</h6>
-                <button class="btn btn-outline-secondary w-100 mt-2">Agregar al carrito</button>
+                <div>
+                  <h6 class="card-title fw-bold text-dark mb-1">Botella Térmica 1 Litro</h6>
+                  <p class="text-muted small mb-2">Q151.99</p>
+                </div>
+                <button class="btn btn-primary btn-sm w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al carrito</button>
               </div>
             </div>
           </div>
 
           <!-- Producto 6 -->
           <div class="col">
-            <div class="card h-100 shadow-sm text-center">
-              <img src="https://picsum.photos/400/300?random=15" class="card-img-top" alt="Producto 6" style="height: 200px; object-fit: cover;">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://picsum.photos/400/300?random=206" class="card-img-top" alt="Guantes Gym" style="height: 180px; object-fit: cover;">
               <div class="card-body d-flex flex-column justify-content-between">
-                <h6 class="card-title">Nombre del Producto 6</h6>
-                <button class="btn btn-outline-secondary w-100 mt-2">Agregar al carrito</button>
+                <div>
+                  <h6 class="card-title fw-bold text-dark mb-1">Guantes para Gimnasio</h6>
+                  <p class="text-muted small mb-2">Q114.00</p>
+                </div>
+                <button class="btn btn-primary btn-sm w-100"><i class="bi bi-cart-plus me-1"></i> Agregar al carrito</button>
               </div>
             </div>
           </div>
@@ -161,9 +190,11 @@
     </div>
   </div>
 
-  <!-- Pie de página (Footer) -->
-  <footer class="bg-white border-top py-3 mt-5 text-center">
-    <p class="mb-0 text-muted">Diseñado por: <strong>Oscar Leonel Cruz Paredes</strong> - <strong>1890-23-5704</strong></p>
+  <!-- Pie de Página Centrado -->
+  <footer class="bg-dark text-white py-3 mt-5 text-center">
+    <div class="container">
+      <p class="mb-0 text-light small">Diseñado por: <strong>Oscar Leonel Cruz Paredes</strong> - <strong>1890-23-5704</strong></p>
+    </div>
   </footer>
 
   <!-- Bootstrap 5 JS Bundle CDN -->
