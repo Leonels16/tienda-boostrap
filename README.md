@@ -14,4 +14,4 @@ Esta tarea consiste en la maquetación visual e interfaz responsiva para la pág
 * **Buttons (`btn`, `btn-outline-secondary`):** Botones estilizados para añadir productos.
 
 ## Despliegue
-* **Sitio Web en línea:** [Poner aquí el enlace de GitHub Pages / Netlify]
+* **Sitio Web en línea:** https://leonels16.github.io/tienda-boostrap/
