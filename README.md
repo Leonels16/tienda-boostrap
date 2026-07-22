@@ -1,6 +1,6 @@
 # Maquetación de Página Principal - Tienda Online
 
-Este proyecto consiste en la maquetación visual e interfaz responsiva para la página principal de una tienda online utilizando **Bootstrap 5**.
+Esta tarea consiste en la maquetación visual e interfaz responsiva para la página principal de una tienda online utilizando **Bootstrap 5**.
 
 ## Datos del Estudiante
 * **Nombre completo:** Oscar Leonel Cruz Paredes
